@@ -29,6 +29,9 @@
       ITPG is not liable for any losses or damages resulting from reliance on
       user-generated ratings.
     </li>
+		<li>
+			ITPG has no affiliation or relationship with the universities or educational institutions from which the professors come and are graded.
+		</li>
   </ol>
 
   <p>Thank you for your understanding.</p>
