@@ -6,6 +6,7 @@
   import GradeForm from "../GradeForm.svelte";
   import api from "../api.js";
   import Dialog from "../Dialog.svelte";
+	import logo from "../assets/itpg-logo.png"
 
   const searchTypes = { courseCode: 0, courseName: 1, profName: 2 };
   const ptOptions = {
@@ -172,10 +173,14 @@
 />
 
 {#if rows == null}
-  <p transition:fade={{ delay: 50, duration: 200 }}>🤔</p>
+	<img src={logo} alt="itpg logo" transition:fade={{ delay: 50, duration: 200 }}/>
 {/if}
 
 <style>
+	img {
+		padding: 30px;
+	}
+
   section {
     display: flex;
     flex-direction: column;
@@ -185,14 +190,6 @@
 
   form {
     flex-direction: row;
-  }
-
-  p {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 200px;
-    margin-top: 50px;
   }
 
   h2 {
