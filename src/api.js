@@ -1,6 +1,5 @@
 import { API_URL, NavigatorOnline } from "./store";
 import message from "./message";
-import { initCompiler } from "sass";
 
 const errNoInternet = message.error(["not connected to the internet 😔"]);
 const errNoApi = message.error(["could not connect to the API...😔"]);

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --outDir dist/demo",
+    "build-qu": "vite build --mode qu --outDir dist/qu",
     "preview": "vite preview",
     "format": "prettier --write ."
   },
