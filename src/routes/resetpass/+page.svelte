@@ -30,7 +30,7 @@
 
 <title>ITPG - Reset Password</title>
 
-<form use:resetForm>
+<form use:resetForm on:submit|preventDefault>
 	<h6 class="padding">Reset Your Password</h6>
 
 	<div class="field label suffix round border">

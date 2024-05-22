@@ -74,7 +74,7 @@
 		</div>
 
 		<div class="page padding {tabs.changePass == true ? 'active' : ''}">
-			<form use:changePasswordForm>
+			<form use:changePasswordForm on:submit|preventDefault>
 				<div class="field label suffix round border">
 					<input
 						name="password"
@@ -124,7 +124,7 @@
 		</div>
 
 		<div class="page padding {tabs.deleteAccount == true ? 'active' : ''}">
-			<form use:deleteAccountForm>
+			<form use:deleteAccountForm on:submit|preventDefault>
 				<div class="field label suffix round border">
 					<input
 						name="email"

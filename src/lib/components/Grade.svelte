@@ -35,7 +35,7 @@
 	};
 </script>
 
-<dialog bind:this={dialog} class="modal center middle">
+<dialog bind:this={dialog} class="modal center middle" on:submit|preventDefault>
 	<form use:gradeForm>
 		<h6>Grade course: {course.courseName} ({course.courseCode}), by {course.profName}</h6>
 

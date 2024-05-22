@@ -71,7 +71,7 @@
 
 <h6 class="center-align">Search and Grade your Courses 🔍✍️</h6>
 
-<form use:searchForm>
+<form use:searchForm on:submit|preventDefault>
 	<div class="field suffix round fill border small">
 		<select name="searchOption" bind:value={searchOption} use:validators={[required]}>
 			<option value="">--Select Search Type--</option>
