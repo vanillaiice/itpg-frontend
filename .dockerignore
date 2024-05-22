@@ -1,0 +1,10 @@
+build
+Dockerfile
+.env
+.env.*
+!.env.production
+eslint.config.js
+node_modules
+.prettierignore
+.prettierrc
+TODO

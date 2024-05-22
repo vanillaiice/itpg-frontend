@@ -1,0 +1,36 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/about": [
+		"src/routes/+layout.js"
+	],
+	"/contact": [
+		"src/routes/+layout.js"
+	],
+	"/courses": [
+		"src/routes/courses/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/dashboard": [
+		"src/routes/+layout.js"
+	],
+	"/disclaimer": [
+		"src/routes/+layout.js"
+	],
+	"/privacy": [
+		"src/routes/+layout.js"
+	],
+	"/professors": [
+		"src/routes/professors/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/resetpass": [
+		"src/routes/+layout.js"
+	],
+	"/scores": [
+		"src/routes/scores/+page.js",
+		"src/routes/+layout.js"
+	]
+}
