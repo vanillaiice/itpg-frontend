@@ -33,3 +33,4 @@ firebase.json
 # misc
 TODO
 .env*
+.svelte-kit/
