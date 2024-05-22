@@ -1,8 +1,0 @@
-import{s as g,e as p,k as v,c as u,l as m,m as b,i,n as c,d as a}from"../chunks/scheduler.Dgxcbnqg.js";import{S as T,i as w}from"../chunks/index.BAd-COy6.js";function _(x){let t,d="ITPG - About",r,o,f="About Us ℹ️",l,s,h=`<p>Welcome to ITPG (<b>I</b>s <b>T</b>his <b>P</b>rofessor <b>G</b>ood ?). We are dedicated to
-		providing students with a comprehensive platform to rate and review professors, facilitating
-		more informed course selections.</p> <p>Our platform is designed with the user in mind, ensuring a seamless experience as you explore
-		and engage with our features. We aim to empower students to share their experiences openly,
-		providing valuable insights for their fellow students.</p> <p>ITPG is more than just a platform; it&#39;s a community. We believe in the power of collaboration
-		and collective knowledge. Your contributions and feedback shape our platform&#39;s growth and
-		impact.</p> <p>Finally, thank you for being part of our journey. Together, we&#39;re revolutionizing the way
-		students choose their courses and professors.</p> <p>ITPG Team 👋</p>`;return{c(){t=p("title"),t.textContent=d,r=v(),o=p("h2"),o.textContent=f,l=v(),s=p("section"),s.innerHTML=h},l(e){t=u(e,"TITLE",{"data-svelte-h":!0}),m(t)!=="svelte-18lvq76"&&(t.textContent=d),r=b(e),o=u(e,"H2",{"data-svelte-h":!0}),m(o)!=="svelte-1stt4ll"&&(o.textContent=f),l=b(e),s=u(e,"SECTION",{"data-svelte-h":!0}),m(s)!=="svelte-145h5f5"&&(s.innerHTML=h)},m(e,n){i(e,t,n),i(e,r,n),i(e,o,n),i(e,l,n),i(e,s,n)},p:c,i:c,o:c,d(e){e&&(a(t),a(r),a(o),a(l),a(s))}}}class I extends T{constructor(t){super(),w(this,t,null,_,g,{})}}export{I as component};
