@@ -12,3 +12,4 @@ Makefile
 dist
 .firebase*
 firebase*
+*.sh
