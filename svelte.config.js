@@ -1,7 +1,23 @@
-//import adapter from '@sveltejs/adapter-auto';
-//import adapter from 'svelte-adapter-bun';
-import adapter from '@sveltejs/adapter-static';
+import adapterBun from 'svelte-adapter-bun';
+import adapterStatic from '@sveltejs/adapter-static';
+import adapterNode from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+
+let adapter;
+
+switch (process.env.ADAPTER || 'static') {
+	case 'static':
+		adapter = adapterStatic;
+		break;
+	case 'bun':
+		adapter = adapterBun;
+		break;
+	case 'node':
+		adapter = adapterNode;
+		break;
+	default:
+		throw new Error('Unknown adapter: ' + process.env.ADAPTER);
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
