@@ -5,6 +5,7 @@ WORKDIR /app
 ARG API_URL=https://api.itpg.cc/demo
 
 COPY package.json .
+
 COPY bun.lockb .
 
 RUN bun install
@@ -12,6 +13,8 @@ RUN bun install
 COPY . .
 
 ENV VITE_API_URL=$API_URL
+
+ENV ADAPTER=bun
 
 RUN bun run build
 
