@@ -23,10 +23,10 @@
 		await api
 			.getScoresByCourse(code)
 			.then((d) => {
-				scores = d == null ? [] : d;
+				scores = d.message == null ? [] : d.message;
 			})
 			.catch((e) => {
-				console.log(e);
+				throw e;
 			});
 	};
 

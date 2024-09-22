@@ -42,7 +42,7 @@
 					throw 'please select a search type';
 			}
 
-			data = d == null ? [] : d;
+			data = d.message == null ? [] : d.message;
 
 			if (data.length == 0) {
 				msg = 'no results';

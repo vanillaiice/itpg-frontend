@@ -4,12 +4,6 @@ const fetchMethods = { get: 'get', post: 'post' };
 
 const credentialModes = { omit: 'omit', include: 'include' };
 
-const responses = {
-	httpOk: 200,
-	apiOk: 2000,
-	notConfirmed: 4006
-};
-
 const fetchFunc = async (path, method, body, creds) => {
 	let options = { method: method, credentials: creds, body: null };
 	if (body != null) {
@@ -20,14 +14,7 @@ const fetchFunc = async (path, method, body, creds) => {
 		fetch(`${API_URL}/${path}`, options)
 			.then((response) => response.json())
 			.then((result) => {
-				if (
-					result.code == responses.apiOk ||
-					(result.code == responses.notConfirmed && path == 'register')
-				) {
-					resolve(result.message);
-				} else {
-					reject(result.message);
-				}
+				resolve(result);
 			})
 			.catch((err) => {
 				reject(err);

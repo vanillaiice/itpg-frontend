@@ -32,9 +32,29 @@
 
 		await api
 			.register(email, password)
-			.then(() => {
-				dialog.close();
-				confirmDialog.showModal();
+			.then((res) => {
+				if (res.code == 4006) {
+					dialog.close();
+					confirmDialog.showModal();
+				} else if (res.code == 5004) {
+					dialog.close();
+
+					api
+						.login(email, password)
+						.then(() => {
+							snackbarMsg = 'logged in';
+							$LoginStatus = true;
+						})
+						.catch((e) => {
+							snackbarType = 'error';
+							snackbarMsg = e;
+						})
+						.finally(() => {
+							dialog.close();
+						});
+				} else {
+					throw new Error(`${res.code}: ${res.message}}`);
+				}
 			})
 			.catch((e) => {
 				errorMsg = e;
