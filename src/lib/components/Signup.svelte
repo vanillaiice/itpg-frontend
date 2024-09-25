@@ -53,7 +53,7 @@
 							dialog.close();
 						});
 				} else {
-					throw new Error(`${res.code}: ${res.message}}`);
+					throw new Error(`${res.code}: ${res.message}`);
 				}
 			})
 			.catch((e) => {

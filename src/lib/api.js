@@ -14,7 +14,11 @@ const fetchFunc = async (path, method, body, creds) => {
 		fetch(`${API_URL}/${path}`, options)
 			.then((response) => response.json())
 			.then((result) => {
-				resolve(result);
+				if (result.code == 2000) {
+					resolve(result);
+				} else {
+					reject(result.message);
+				}
 			})
 			.catch((err) => {
 				reject(err);
@@ -43,12 +47,19 @@ let api = {
 	},
 
 	register: async (email, password) => {
-		return fetchFunc(
-			'register',
-			fetchMethods.post,
-			{ email: email, password: password },
-			credentialModes.omit
-		);
+		return new Promise((resolve, reject) => {
+			fetch(`${API_URL}/register`, {
+				method: fetchMethods.post,
+				credentials: 'include',
+				body: JSON.stringify({ email: email, password: password })
+			})
+				.then((response) => {
+					resolve(response.json());
+				})
+				.catch((err) => {
+					reject(err);
+				});
+		});
 	},
 
 	login: async (email, password) => {

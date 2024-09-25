@@ -7,7 +7,7 @@
 	import { passwordMatch } from '$lib/passwordMatch';
 	import { typeDelete } from '$lib/typeDelete';
 
-	const changePasswordForm = useForm({ password: {}, newPassword: {} }, 'changePasswordForm');
+	const changePasswordForm = useForm({oldPassword: {}, password: {} }, 'changePasswordForm');
 	const deleteAccountForm = useForm({ email: {}, password: {} }, 'deleteAccountForm');
 
 	let tabs = { changePass: true, deleteAccount: false };
@@ -27,7 +27,6 @@
 				type = 'primary';
 				msg = 'password changed !';
 
-				$LoginStatus = false;
 				$changePasswordForm.reset();
 			})
 			.catch((e) => {
@@ -77,7 +76,7 @@
 			<form use:changePasswordForm on:submit|preventDefault>
 				<div class="field label suffix round border">
 					<input
-						name="password"
+						name="oldPassword"
 						type="password"
 						autocomplete="current-password"
 						use:validators={[required]}
@@ -88,7 +87,7 @@
 
 				<div class="field label suffix round border">
 					<input
-						name="newPassword"
+						name="password"
 						type="password"
 						autocomplete="new-password"
 						bind:value={password}
@@ -115,8 +114,8 @@
 					disabled={!$changePasswordForm.valid}
 					on:click={() => {
 						changePassword(
-							$changePasswordForm.password.value,
-							$changePasswordForm.newPassword.value
+							$changePasswordForm.oldPassword.value,
+							$changePasswordForm.password.value
 						);
 					}}>Change</button
 				>
