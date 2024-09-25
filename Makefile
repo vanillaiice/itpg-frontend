@@ -1,13 +1,12 @@
+PKG_VER := 0.3.3
+IMAGE_BASE := bun1.1.29-alpine
+TAG := ${PKG_VER}-${IMAGE_BASE}
+
 docker-run:
-	docker run --rm -p 3000:3000 itpg-frontend-sveltekit
+	docker run --rm -p 3000:3000 itpg-frontend:${TAG}
 
 docker-build:
-	docker build -t itpg-frontend-sveltekit .
+	docker build -t ghcr.io/vanillaiice/itpg-frontend:${TAG} .
 
-docker-build-vultr:
-	docker build -t ewr.vultrcr.com/vanillaiice/itpg-frontend-sveltekit:0.1.0-bun-1.1.4-alpine .
-
-docker-push-vultr:
-	docker push ewr.vultrcr.com/vanillaiice/itpg-frontend-sveltekit:0.1.0-bun-1.1.4-alpine
-
-vultr: docker-build-vultr docker-push-vultr
+docker-push:
+	docker push ghcr.io/vanillaiice/itpg-frontend:${TAG}
