@@ -1,4 +1,4 @@
-FROM oven/bun:1.1.4-alpine AS build
+FROM oven/bun:1.1.29-alpine AS build
 
 WORKDIR /app
 
@@ -18,7 +18,9 @@ ENV ADAPTER=bun
 
 RUN bun run build
 
-FROM oven/bun:1.1.4-alpine
+FROM oven/bun:1.1.29-alpine
+
+LABEL org.opencontainers.image.source=https://github.com/vanillaice/itpg-frontend
 
 COPY --from=build /app/build /build
 
