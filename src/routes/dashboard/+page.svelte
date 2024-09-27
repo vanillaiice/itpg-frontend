@@ -7,7 +7,7 @@
 	import { passwordMatch } from '$lib/passwordMatch';
 	import { typeDelete } from '$lib/typeDelete';
 
-	const changePasswordForm = useForm({oldPassword: {}, password: {} }, 'changePasswordForm');
+	const changePasswordForm = useForm({ oldPassword: {}, password: {} }, 'changePasswordForm');
 	const deleteAccountForm = useForm({ email: {}, password: {} }, 'deleteAccountForm');
 
 	let tabs = { changePass: true, deleteAccount: false };

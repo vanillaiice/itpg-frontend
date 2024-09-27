@@ -52,7 +52,7 @@
 						.finally(() => {
 							dialog.close();
 						});
-				} else {
+				} else if (res.code != 2000) {
 					throw new Error(`${res.code}: ${res.message}`);
 				}
 			})

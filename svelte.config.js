@@ -1,7 +1,7 @@
 import adapterBun from 'svelte-adapter-bun';
 import adapterStatic from '@sveltejs/adapter-static';
 import adapterNode from '@sveltejs/adapter-node';
-import adapterVercel from '@sveltejs/adapter-vercel'
+import adapterVercel from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 let adapter;
