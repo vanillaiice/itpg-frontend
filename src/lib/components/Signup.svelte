@@ -202,7 +202,7 @@
 				type="text"
 				name="code"
 				autocomplete="off"
-				use:validators={[required, minLength(8), maxLength(8)]}
+				use:validators={[required, minLength(10), maxLength(10)]}
 			/>
 			<label>confirmation code</label>
 			<i>code</i>
