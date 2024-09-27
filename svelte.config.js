@@ -1,6 +1,7 @@
 import adapterBun from 'svelte-adapter-bun';
 import adapterStatic from '@sveltejs/adapter-static';
 import adapterNode from '@sveltejs/adapter-node';
+import adapterVercel from '@sveltejs/adapter-vercel'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 let adapter;
@@ -14,6 +15,9 @@ switch (process.env.ADAPTER || 'static') {
 		break;
 	case 'node':
 		adapter = adapterNode;
+		break;
+	case 'vercel':
+		adapter = adapterVercel;
 		break;
 	default:
 		throw new Error('Unknown adapter: ' + process.env.ADAPTER);
